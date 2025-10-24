@@ -1,0 +1,73 @@
+{
+  "name": "AI PM Tools",
+  "version": "1.0.0",
+  "description": "Comprehensive AI-powered toolkit for enterprise product managers. Includes agents, commands, and skills for the complete product development lifecycle.",
+  "author": "Product Management Community",
+  "repository": "https://github.com/rraheja/ai-pm-tools",
+  "license": "Apache-2.0",
+  "tags": [
+    "product-management",
+    "ai",
+    "enterprise",
+    "strategy",
+    "requirements",
+    "roadmap",
+    "agile",
+    "engineering",
+    "operations",
+    "gtm"
+  ],
+  "category": "productivity",
+  "icon": "📊",
+  "homepage": "https://github.com/rraheja/ai-pm-tools",
+  "keywords": [
+    "product manager",
+    "PM",
+    "product strategy",
+    "roadmap",
+    "PRD",
+    "user stories",
+    "agile",
+    "scrum",
+    "requirements",
+    "AI use case prioritization",
+    "lean canvas",
+    "six pager",
+    "PRFAQ",
+    "release notes",
+    "GTM",
+    "competitive analysis"
+  ],
+  "features": [
+    "12 specialized agents for different product roles",
+    "38 custom commands across product lifecycle",
+    "AI use case prioritization framework",
+    "Amazon-style document templates (6-pager, PR/FAQ)",
+    "PRD and requirements generation",
+    "Agile epic and user story creation",
+    "Release notes and blog post generation",
+    "Competitive intelligence and market analysis",
+    "Roadmap and strategic planning",
+    "GTM and launch planning",
+    "SRE and operations support"
+  ],
+  "installation": {
+    "type": "git",
+    "url": "https://github.com/rraheja/ai-pm-tools.git"
+  },
+  "requirements": {
+    "claude_version": ">=4.0"
+  },
+  "plugins": [
+    {
+      "id": "ai-pm-tools-core",
+      "name": "AI PM Tools Core Package",
+      "description": "Complete suite of 12 PM agents, 38 commands, and battle-tested skills for the entire product lifecycle",
+      "version": "1.0.0",
+      "type": "mcp",
+      "entry_point": ".claude-plugin/plugin.json",
+      "category": "productivity",
+      "tags": ["product-management", "enterprise", "strategy"]
+    }
+  ]
+}
