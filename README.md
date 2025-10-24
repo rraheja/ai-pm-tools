@@ -23,37 +23,23 @@ AI PM Tools is a comprehensive suite designed for **enterprise product managers*
 
 ## 📦 Installation
 
-AI PM Tools can be installed in three ways, depending on how you use Claude:
+AI PM Tools supports installation across **11 different AI platforms** to match your workflow preferences:
 
-### Quick Install via Claude Marketplace (Coming Soon)
-1. Open Claude → Settings → Plugins & Marketplace
-2. Search for "AI PM Tools"
-3. Click Install
-4. Select agents and commands to activate
+- **Claude** (Desktop & Web - Paid/Free)
+- **ChatGPT** (Paid/Free)
+- **Perplexity** (Paid/Free)
+- **NotebookLM** (Free)
+- **Claude Code** (CLI)
+- **Slack with Claude** (Team collaboration)
 
-**For detailed instructions:** See [INSTALLATION.md](INSTALLATION.md#method-1-install-via-claude-marketplace-recommended)
+### 🚀 Get Started
 
-### Git Clone (Recommended for Developers)
-```bash
-git clone https://github.com/rraheja/ai-pm-tools.git
-cd ai-pm-tools
-```
-
-Then follow the [Git Installation Guide](INSTALLATION.md#method-2-install-via-git-clone-for-developmentcustomization).
-
-### Manual Installation (Claude Web)
-If you're using claude.ai in your browser:
-1. Download the repository as ZIP
-2. Upload agents and skills to a Claude Project
-3. Reference command files in your conversations
-
-**Full guide:** [Web Installation](INSTALLATION.md#method-3-manual-installation-web-claude)
-
-
-### Installation Help
-- **Troubleshooting**: See [INSTALLATION.md](INSTALLATION.md#troubleshooting)
-- **Configuration**: See [INSTALLATION.md](INSTALLATION.md#post-installation-setup)
-- **Updates**: See [INSTALLATION.md](INSTALLATION.md#updating-ai-pm-tools)
+- [Claude Desktop](INSTALLATION.md#️-claude-desktop-paid-plans) - UI-focused PMs
+- [Claude.ai Web](INSTALLATION.md#-claudeai-paid-plans) - Browser-based workflows
+- [ChatGPT](INSTALLATION.md#-chatgpt-paid-plans) - OpenAI ecosystem users
+- [NotebookLM](INSTALLATION.md#-notebooklm-free) - Document synthesis & research
+- [All Installation Options](INSTALLATION.md#-quick-navigation---choose-your-tool)
+- 👉 [View Complete Installation Guide →](INSTALLATION.md)
 
 ---
 

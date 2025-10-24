@@ -4,12 +4,33 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
-## 🖥️ Claude Desktop Pro
-*Best for: UI-focused Product Managers who prefer settings-driven installation*
+## 🚀 Quick Navigation - Choose Your Tool
+
+**Select your platform to jump directly to installation instructions:**
+
+### Installation Options
+- 🖥️ Claude Desktop [Paid](#️-claude-desktop-paid-plans) | [Free](#️-claude-desktop-free) - Anthropic ecosystem Desktop UI interface
+- 🌐 Claude.ai [Paid](#-claudeai-paid-plans) | [Free](#-claudeai-free) - Web-based interface
+- 💻 Claude [Code](#-claude-code) - Command-line interface for technical PMs
+- 🤖 ChatGPT [Paid](#-chatgpt-paid-plans) | [Free](#-chatgpt-free) - OpenAI ChatGPT ecosystem
+- 🔍 Perplexity [Paid](#-perplexity-paid-plans) | [Free)(#-perplexity-free) - Research-focused Perplexity ecosystem
+- 📓 Google NotebookLM [Free](#-notebooklm-free) - Best for document synthesis
+- [📱 Slack with Claude Integration](#-slack-with-claude-integration) - Team collaboration workflows
+
+### Additional Resources
+- [🚀 Quick Start Guide by Persona](#-quick-start-guide-by-persona) - Recommended setup based on your role
+- [📋 Universal Testing Commands](#-universal-testing-commands) - Verify your installation
+- [🔧 Troubleshooting](#-troubleshooting) - Common issues and solutions
+- [📞 Support](#-support) - Get help
+
+---
+
+## 🖥️ Claude Desktop (Paid Plans)
+*Best for: Product Managers who prefer UI settings-driven installation*
 
 **Prerequisites:**
 - Claude Desktop app installed ([Download here](https://claude.com/download))
-- Claude Pro/Team/Enterprise subscription
+- Claude (Paid Plans) subscription
 
 **Installation Steps:**
 
@@ -26,14 +47,14 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 3. **Activate Components**
    - In Plugin settings, enable:
-     - ✅ All 12 Agents (recommended)
-     - ✅ All 38 Commands
-     - ✅ AI Use Case Prioritization skill
+     - ✅ All Agents (recommended) or select preferred ones
+     - ✅ All Commands (recommended) or select preferred ones
+     - ✅ All Skills (recommended) or select preferred ones
    - Click **"Apply Changes"**
 
 4. **Verify Installation**
    ```
-   Hello Claude! I just installed AI PM Tools. Can you list the available agents?
+   I just installed AI PM Tools. Can you list the available agents?
    ```
 
 ### Alternate Method: Local Installation for Skills Development
@@ -60,12 +81,12 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
-## 🖥️ Claude Desktop Free
+## 🖥️ Claude Desktop (Free)
 *Best for: Product Managers on free tier who want basic PM assistance*
 
 **Prerequisites:**
 - Claude Desktop app installed ([Download here](https://claude.com/download))
-- Free Claude account
+- Claude (Free) account
 
 **Installation Steps:**
 
@@ -80,28 +101,28 @@ This comprehensive guide covers installation across multiple AI platforms to sup
      - `agents/product-strategy.md` (for strategy work)
      - `agents/product-manager.md` (for requirements/features)
      - `agents/agile-coach.md` (for team management)
+   - Upload relevant skills and commands
 
 3. **Set Context**
    ```
-   [Upload the agent files]
+   [Upload the agent, skills and commands files]
    
-   Claude, I've uploaded Product Management agent personas. Please act as the 
-   appropriate agent based on my requests and use the uploaded knowledge.
+   Act as the Product Manager Agent and use Skill to process my requests, using the uploaded knowledge.
    ```
 
 4. **Test Installation**
    ```
-   Act as the Product Strategy Agent and help me understand market sizing approaches.
+   Act as the Product Strategy Agent and help me prioritize AI use cases for my portfolio.
    ```
 
 ---
 
-## 🌐 Claude.ai Pro
-*Best for: Product Managers using web interface who prefer browser-based workflows*
+## 🌐 Claude.ai (Paid Plans)
+*Best for: Product Managers using web interface*
 
 **Prerequisites:**
 - Claude account ([claude.ai](https://claude.ai))
-- Claude Pro/Team subscription for Projects feature
+- Claude (Paid Plans) subscription for Projects feature
 
 **Installation Steps:**
 
@@ -132,18 +153,17 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 4. **Test Installation**
    ```
-   I need help with product strategy. Can you act as the Product Strategy Agent and 
-   help me understand market sizing approaches?
+   I need help with product strategy. Act as the Product Strategy Agent and help me understand market sizing approaches?
    ```
 
 ---
 
-## 🌐 Claude.ai Free
+## 🌐 Claude.ai (Free)
 *Best for: Product Managers on free tier who want ad-hoc PM assistance*
 
 **Prerequisites:**
 - Claude account ([claude.ai](https://claude.ai))
-- Free Claude account
+- Claude (Free) account
 
 **Installation Steps:**
 
@@ -174,11 +194,11 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 ---
 
 ## 💻 Claude Code
-*Best for: Technical Product Managers comfortable with command-line interfaces*
+*Best for: Technical Product Managers comfortable with command-line interfaces and IDE*
 
 **Prerequisites:**
 - Claude Code CLI installed
-- VS Code with Claude Code extension (optional)
+- VS Code or Cursor with Claude Code
 - Git access
 
 **Installation Steps:**
@@ -219,11 +239,11 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
-## 🤖 ChatGPT Plus/Team/Enterprise
-*Best for: Product Managers using OpenAI ecosystem with paid subscriptions*
+## 🤖 ChatGPT (Paid Plans)
+*Best for: Product Managers using OpenAI ecosystem* 
 
 **Prerequisites:**
-- ChatGPT Plus, Team, or Enterprise subscription
+- ChatGPT (Paid Plans) subscription
 - Access to GPT Builder
 
 **Installation Steps:**
@@ -267,18 +287,18 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
-## 🤖 ChatGPT Free
+## 🤖 ChatGPT (Free)
 *Best for: Product Managers using OpenAI free tier for ad-hoc assistance*
 
 **Prerequisites:**
-- ChatGPT free account
+- ChatGPT (Free) account
 
 **Installation Steps:**
 
 1. **Download Repository Files**
    - Go to [GitHub Repository](https://github.com/rraheja/ai-pm-tools)
    - Click **"Code"** → **"Download ZIP"**
-   - Extract and keep files handy
+   - Extract and use Agent, Skill and Commands as needed
 
 2. **Copy-Paste Agent Instructions**
    ```
@@ -306,11 +326,11 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
-## 🔍 Perplexity Pro/Enterprise
+## 🔍 Perplexity (Paid Plans)
 *Best for: Product Managers who need research-focused AI with web access*
 
 **Prerequisites:**
-- Perplexity Pro or Enterprise subscription
+- Perplexity (Paid Plans) subscription
 - Access to Spaces feature
 
 **Installation Steps:**
@@ -363,11 +383,11 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
-## 🔍 Perplexity Free
+## 🔍 Perplexity (Free)
 *Best for: Product Managers on free tier who want research assistance*
 
 **Prerequisites:**
-- Perplexity free account
+- Perplexity (Free) account
 
 **Installation Steps:**
 
@@ -403,12 +423,121 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 
 ---
 
+## 📓 NotebookLM (Free)
+*Best for: Product Managers who need document synthesis, research notes, and knowledge base creation*
+
+**Prerequisites:**
+- Google account
+- Access to NotebookLM ([notebooklm.google.com](https://notebooklm.google.com))
+
+**Installation Steps:**
+
+1. **Create AI PM Tools Notebook**
+   - Go to [notebooklm.google.com](https://notebooklm.google.com)
+   - Click **"New notebook"** or **"+ Create"**
+   - Name: "AI PM Tools Knowledge Base"
+
+2. **Upload Agent Files**
+   - Click **"Add Source"** → **"Upload"**
+   - Upload all 12 agent files from `/agents/` folder (priority - essential):
+     - `product-strategy.md`
+     - `product-manager.md`
+     - `product-design.md`
+     - `product-marketing.md`
+     - `engineering-architect.md`
+     - `quality-assurance.md`
+     - `sre-operations.md`
+     - `product-operations.md`
+     - `customer-success.md`
+     - `sales-marketing.md`
+     - `technical-program-manager.md`
+     - `agile-coach.md`
+
+3. **Upload Skills Documentation**
+   - Continue clicking **"Add Source"** → **"Upload"**
+   - Upload skill files:
+     - `/skills/ai-usecase-prioritization/SKILL.md`
+     - Any other skill documentation files
+
+4. **Upload Command Templates**
+   - Upload command files from `/commands/` folders (select most frequently used):
+     - **Discovery & Strategy:** `create-lean-canvas.md`, `analyze-competition.md`, `prioritize-ai-usecases.md`
+     - **Planning:** `write-requirements.md`, `create-prfaq.md`, `build-roadmap.md`
+     - **Execution:** `create-epic-stories.md`, `create-test-plan.md`, `plan-sprint.md`
+     - **Go-To-Market:** `plan-product-launch.md`, `create-success-metrics.md`
+     - **Operations:** `generate-status-report.md`, `facilitate-retrospective.md`
+   - NotebookLM supports up to 50 sources per notebook
+
+5. **Organize Your Notebook** (Optional)
+   - Use NotebookLM's pinning feature to highlight key agents
+   - Create notes summarizing each agent's expertise
+   - Add your own PM context and project notes
+
+6. **Test Installation**
+   ```
+   Act as the Product Strategy Agent and explain the difference between TAM, SAM, and SOM
+   for market sizing. Reference the uploaded agent knowledge.
+   ```
+
+### How to Use NotebookLM with AI PM Tools
+
+**Best Practices:**
+
+1. **Ask Agent-Specific Questions**
+   ```
+   Based on the Product Strategy Agent's expertise, help me create a competitive
+   positioning strategy for an AI-powered CRM platform.
+   ```
+
+2. **Reference Command Templates**
+   ```
+   Using the create-lean-canvas command template, help me build a lean canvas for a
+   new mobile app that helps small businesses manage inventory.
+   ```
+
+3. **Apply Skills and Frameworks**
+   ```
+   Using the AI use case prioritization skill, help me evaluate these three AI projects:
+   1. Customer support chatbot
+   2. Automated code review tool
+   3. Predictive analytics dashboard
+   ```
+
+4. **Synthesize Across Multiple Sources**
+   ```
+   Combining insights from the Product Strategy, Product Marketing, and Customer Success
+   agents, help me develop a go-to-market strategy for our new feature.
+   ```
+
+5. **Generate Documents and Artifacts**
+   ```
+   Create a comprehensive product requirements document following the write-requirements
+   command structure. Include user stories, acceptance criteria, and technical specifications.
+   ```
+
+**NotebookLM Unique Features:**
+
+- **Audio Overviews:** Generate podcast-style discussions about your PM strategies
+- **Study Guide:** Create structured learning materials from PM frameworks
+- **Timeline View:** Track chronological development of product ideas
+- **Source Citations:** All responses include citations to specific uploaded documents
+- **Notebook Guide:** Get AI-generated summaries and suggested questions
+
+**Limitations:**
+
+- No file generation (Excel templates must be downloaded separately from GitHub)
+- 50 source limit per notebook (prioritize most-used agents and commands)
+- Best for research and synthesis, not real-time collaborative workflows
+- Cannot execute code or create interactive tools
+
+---
+
 ## 📱 Slack with Claude Integration
-*Best for: Product Managers wanting AI assistance in team communication workflows*
+*Best for: Product Managers using AI in their familiar Slack interface*
 
 **Prerequisites:**
 - Slack workspace on paid plan
-- Claude Team/Enterprise subscription
+- Claude (Paid Plans) subscription
 - Admin permissions to install apps
 
 **Installation Steps:**
@@ -469,19 +598,22 @@ This comprehensive guide covers installation across multiple AI platforms to sup
 ## 🚀 Quick Start Guide by Persona
 
 ### **UI-Focused Product Managers**
-**Recommended:** Claude Desktop Pro → Plugin Marketplace → Test with Product Strategy Agent
+**Recommended:** Claude Desktop (Paid Plans) → Plugin Marketplace → Test with Product Strategy Agent
 
-### **Web-First Product Managers** 
-**Recommended:** Claude.ai Pro → Projects → Upload all agents → Create comprehensive project
+### **Web-First Product Managers**
+**Recommended:** Claude.ai (Paid Plans) → Projects → Upload all agents → Create comprehensive project
 
 ### **Technical Product Managers**
 **Recommended:** Claude Code → Plugin installation → Repository-level setup
 
 ### **Budget-Conscious Product Managers**
-**Recommended:** Claude.ai Free → Direct file upload → Focus on 2-3 core agents
+**Recommended:** Claude.ai (Free) → Direct file upload → Focus on 2-3 core agents
 
 ### **Research-Heavy Product Managers**
-**Recommended:** Perplexity Pro → Spaces → Upload knowledge base → Combine with web research
+**Recommended:** Perplexity (Paid Plans) → Spaces → Upload knowledge base → Combine with web research
+
+### **Document-Synthesis Focused Product Managers**
+**Recommended:** NotebookLM (Free) → Upload all agents → Synthesize insights → Generate study guides
 
 ### **Team-Collaboration Focused**
 **Recommended:** Slack with Claude → Official app → Custom PM commands
@@ -524,8 +656,8 @@ Try these across any platform to verify your installation:
 - **Commands not working:** Verify plugin is enabled in settings
 - **File generation fails:** Grant file system access
 
-### Claude.ai Issues  
-- **Projects not working:** Verify Pro subscription, check upload limits (20 files max)
+### Claude.ai Issues
+- **Projects not working:** Verify (Paid Plans) subscription, check upload limits (20 files max)
 - **Agents not responding correctly:** Re-upload agent files, clarify project instructions
 
 ### ChatGPT Issues
@@ -533,8 +665,13 @@ Try these across any platform to verify your installation:
 - **Responses too generic:** Be more specific about which agent persona to use
 
 ### Perplexity Issues
-- **Files not uploading:** Check file size (25MB limit), verify Pro subscription
+- **Files not uploading:** Check file size (25MB limit), verify (Paid Plans) subscription
 - **Custom instructions ignored:** Ensure instructions are saved in Space settings
+
+### NotebookLM Issues
+- **Sources not uploading:** Check file format (.md supported), verify source limit (50 max)
+- **Responses not using uploaded knowledge:** Explicitly reference agents or commands in your queries
+- **Audio overview not generating:** Ensure notebook has sufficient content (at least 3-5 sources)
 
 ### Slack Issues
 - **Bot not responding:** Check app permissions, verify Claude subscription
