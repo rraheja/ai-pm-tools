@@ -31,10 +31,12 @@ If any of these are missing, I will ask you to provide them:
 3. **Functional Requirements** - Features, capabilities, acceptance criteria
 4. **Non-Functional Requirements** - Performance, security, scalability
 5. **Technical Requirements** - APIs, integrations, data model
-6. **Out of Scope** - What we're NOT building
-7. **Success Metrics** - KPIs and measurement plan
-8. **Open Questions** - Items needing resolution
-9. **Appendix** - Mockups, diagrams, research
+6. **Cost Analysis** - Per-user costs, infrastructure costs, cost containment strategies
+7. **Adoption Analysis** - User friction solved, adoption risk, usage patterns
+8. **Out of Scope** - What we're NOT building
+9. **Success Metrics** - KPIs and measurement plan
+10. **Open Questions** - Items needing resolution
+11. **Appendix** - Mockups, diagrams, research
 
 ## PRD Structure
 1. **Executive Summary**
@@ -63,16 +65,28 @@ If any of these are missing, I will ask you to provide them:
    - Data model
    - Platform requirements
 
-6. **Out of Scope**
+6. **Cost Analysis**
+   - Estimated cost per user per month
+   - Infrastructure and operational costs
+   - Cost containment strategies (cheaper models, caching, optimization)
+   - Scale analysis (cost at 10k, 100k, 1M users)
+
+7. **Adoption Analysis**
+   - User friction being solved
+   - Adoption risk assessment (major workflow improvement vs. novelty feature)
+   - Expected usage patterns and frequency
+   - Competitive/market validation
+
+8. **Out of Scope**
    - What we're NOT building
 
-7. **Success Metrics**
+9. **Success Metrics**
    - KPIs and measurement plan
 
-8. **Open Questions**
+10. **Open Questions**
    - Items needing resolution
 
-9. **Appendix**
+11. **Appendix**
    - Mockups, diagrams, research
 
 ## Example Usage

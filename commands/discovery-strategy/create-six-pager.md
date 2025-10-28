@@ -38,12 +38,24 @@ Create an Amazon-style 6-pager narrative document for strategic product proposal
    - Mitigation strategies
    - Dependencies
 
-5. **Resources & Timeline** (0.5 pages)
+5. **Cost Analysis** (0.5 pages)
+   - Estimated cost per user per month to support this feature
+   - Infrastructure and operational costs at scale (e.g., 10,000 users making 600 complex queries/month)
+   - Cost containment strategies (cheaper models, caching, optimization)
+   - Break-even analysis and unit economics
+
+6. **Adoption Analysis** (0.5 pages)
+   - Major friction in users' daily workflow being solved
+   - Adoption risk assessment (workflow improvement vs. novelty feature)
+   - Expected usage patterns and retention drivers
+   - Competitive/market validation of need
+
+7. **Resources & Timeline** (0.5 pages)
    - Team requirements
    - Budget
    - Milestones
 
-6. **Appendix** (0.5 pages)
+8. **Appendix** (0.5 pages)
    - Supporting data
    - FAQs
 
