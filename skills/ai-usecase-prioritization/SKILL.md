@@ -1,6 +1,7 @@
 ---
 name: ai-usecase-prioritization
 description: Enterprise AI use case prioritization framework using VALUE/(RISK+COST) formula. Helps product managers score, rank, and visualize AI initiatives. Use when asked to prioritize AI projects, evaluate AI use cases, create AI portfolio strategies, or generate prioritization frameworks.
+allowed-tools: Read, Write, Edit, Grep, Glob
 license: Apache-2.0
 ---
 
@@ -306,5 +307,3 @@ Claude:
 ---
 *Skill Category: Discovery & Strategy*  
 *Version: 2.0 - Anthropic Best Practices*  
-*Last Updated: October 2025*
-
