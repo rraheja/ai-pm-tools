@@ -34,13 +34,22 @@ The framework scores initiatives on:
 
 Higher scores = higher priority. See **SKILL.md** for complete methodology.
 
+## Best Practices for Product Managers
+
+- **Don't game scores** - Use judgment alongside the framework
+- **Phase-appropriate scoring** - Pilot phase scores differ from scale phase
+- **Update as you learn** - Reassess readiness as you gather more information
+- **Framework informs, doesn't decide** - Use scores to inform decisions, not replace judgment
+- **Flag strategic exceptions** - Document when strategic importance overrides scores
+- **Document assumptions** - Track key assumptions behind your scoring decisions
+
 ## Files
 
 - **SKILL.md** - Complete framework, scoring criteria, and workflow (start here)
 - **assets/AI_Use_Case_Prioritization_Template.xlsx** - Pre-configured Excel template for your use cases
 - **assets/AI_Use_Case_Prioritization_Example.xlsx** - Filled template with real-world AI examples
-- **docs/scoring_justification.md** - Template for documenting your scoring decisions
-- **docs/comparison_matrix.md** - Template for comparing initiatives side-by-side
+- **templates/scoring_justification.md** - Template for documenting your scoring decisions
+- **templates/comparison_matrix.md** - Template for comparing initiatives side-by-side
 
 ## Version
 **Version:** 2.0 - Anthropic Best Practices  

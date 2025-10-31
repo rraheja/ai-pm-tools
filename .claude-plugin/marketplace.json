@@ -1,7 +1,7 @@
 {
   "name": "AI PM Tools",
-  "version": "1.0.0",
-  "description": "Comprehensive AI-powered toolkit for enterprise product managers. Includes agents, commands, and skills for the complete product development lifecycle.",
+  "version": "2.0.0",
+  "description": "Enterprise AI-native product management toolkit with 8 specialized agents, 22 PM-focused commands, and 4 battle-tested skills for the complete product lifecycle from strategy to feedback.",
   "author": "Product Management Community",
   "repository": "https://github.com/rraheja/ai-pm-tools",
   "license": "Apache-2.0",
@@ -12,10 +12,8 @@
     "strategy",
     "requirements",
     "roadmap",
-    "agile",
-    "engineering",
-    "operations",
-    "gtm"
+    "prioritization",
+    "ai-use-cases"
   ],
   "category": "productivity",
   "icon": "📊",
@@ -27,29 +25,31 @@
     "roadmap",
     "PRD",
     "user stories",
-    "agile",
-    "scrum",
     "requirements",
     "AI use case prioritization",
     "lean canvas",
-    "six pager",
     "PRFAQ",
     "release notes",
     "GTM",
-    "competitive analysis"
+    "competitive analysis",
+    "market intelligence",
+    "SWOT analysis",
+    "Porter's Five Forces",
+    "product blueprint",
+    "VALUE RISK COST framework"
   ],
   "features": [
-    "12 specialized agents for different product roles",
-    "38 custom commands across product lifecycle",
-    "AI use case prioritization framework",
-    "Amazon-style document templates (6-pager, PR/FAQ)",
+    "8 specialized PM agents for product lifecycle",
+    "22 PM-focused commands across 9 product phases",
+    "AI market intelligence (SWOT, Porter's Five Forces, Competitive Landscape)",
+    "AI use case generation (5 use cases mapped to Strategic Pillars Quadrant)",
+    "VALUE/(RISK+COST) prioritization framework with Excel dashboards",
+    "Comprehensive product blueprints with pricing, architecture, and responsible AI",
+    "Amazon-style document templates (PR/FAQ)",
     "PRD and requirements generation",
-    "Agile epic and user story creation",
-    "Release notes and blog post generation",
-    "Competitive intelligence and market analysis",
-    "Roadmap and strategic planning",
-    "GTM and launch planning",
-    "SRE and operations support"
+    "User story creation with acceptance criteria",
+    "Release notes and launch planning",
+    "Competitive battlecards and win-loss analysis"
   ],
   "installation": {
     "type": "git",
@@ -62,12 +62,12 @@
     {
       "id": "ai-pm-tools-core",
       "name": "AI PM Tools Core Package",
-      "description": "Complete suite of 12 PM agents, 38 commands, and battle-tested skills for the entire product lifecycle",
-      "version": "1.0.0",
+      "description": "Complete suite of 8 PM agents, 22 commands, and 4 battle-tested skills for the entire product lifecycle",
+      "version": "2.0.0",
       "type": "mcp",
       "entry_point": ".claude-plugin/plugin.json",
       "category": "productivity",
-      "tags": ["product-management", "enterprise", "strategy"]
+      "tags": ["product-management", "enterprise", "strategy", "ai-prioritization"]
     }
   ]
 }

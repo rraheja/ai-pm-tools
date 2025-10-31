@@ -9,7 +9,7 @@
 This skill helps organizations identify AI opportunities by:
 1. Analyzing organizational documents (vision, strategy, customer feedback)
 2. Researching industry trends and competitor capabilities
-3. Generating 10 strategic AI use case ideas
+3. Generating 5 strategic AI use case ideas
 4. Mapping to the Strategic Pillars Quadrant
 5. Outputting high-level summaries in multiple formats
 
@@ -20,7 +20,7 @@ This skill helps organizations identify AI opportunities by:
 1. **Upload to Project**:
    - Create or open a Claude Project
    - Upload the entire `ai-usecase-generator` folder (this folder)
-   - Or upload just `SKILL.md` and the `references/` folder
+   - Or upload just `SKILL.md` and the `templates/` folder
 
 2. **That's it!** Claude will automatically detect and use the skill.
 
@@ -30,7 +30,7 @@ You only need these files:
 ```
 ai-usecase-generator/
 ├── SKILL.md              # Main skill instructions (self-contained)
-└── references/
+└── templates/
     ├── use-case-template.md     # Output template
     └── industry-examples.md     # Detailed examples (loaded as needed)
 ```
@@ -46,7 +46,7 @@ Claude will:
 1. Ask for your industry (if not clear)
 2. Request key documents or work with what you provide
 3. Perform automatic web research
-4. Generate 10 AI use cases mapped to strategic quadrants
+4. Generate 5 AI use cases mapped to strategic quadrants
 5. Offer outputs in your preferred format
 
 ## Strategic Pillars Quadrant
@@ -85,7 +85,7 @@ KNOW-HOW ──────────────── ACTIONABLE
 - etc.
 
 ### 3. Visual Quadrant Map
-Shows all 10 use cases positioned in the 2x2 matrix
+Shows all 5 use cases positioned in the 2x2 matrix
 
 ### 4. Executive Formats
 - Word (.docx) - consolidated report
@@ -112,7 +112,7 @@ ai-usecase-generator/
 ├── README.md                          # This file
 ├── SKILL.md                           # Main skill instructions (self-contained, required)
 │
-└── references/                        # Reference files
+└── templates/                         # Template files
     ├── use-case-template.md          # Markdown output template (always used)
     └── industry-examples.md          # Detailed examples (loaded as needed)
 ```
@@ -147,8 +147,8 @@ ai-usecase-generator/
 ## Support
 
 - **Core Framework**: Built into SKILL.md (self-contained)
-- **Industry Examples**: See `references/industry-examples.md`
-- **Template Format**: See `references/use-case-template.md`
+- **Industry Examples**: See `templates/industry-examples.md`
+- **Template Format**: See `templates/use-case-template.md`
 
 ## License
 

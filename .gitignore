@@ -55,3 +55,21 @@ venv.bak/
 
 # Claude AI generated files
 CLAUDE.md
+
+# PMSpecKit Configuration & Outputs
+# Keep the default config checked in, ignore user customizations
+.pmsk/config.local.yaml
+.pmsk/config.override.yaml
+.pmsk/*.local.yaml
+
+# Ignore skill output directories (users should version control these separately if needed)
+01_Strategy/
+02_Planning/
+03_Design/
+04_Requirements/
+05_Development/
+06_Launch/
+output/
+
+# Ignore archive directories created during re-runs
+_archive/

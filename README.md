@@ -5,7 +5,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Claude AI](https://img.shields.io/badge/Claude-AI%20Powered-purple)](https://claude.ai)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/rraheja/ai-pm-tools)
+[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](https://github.com/rraheja/ai-pm-tools)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
@@ -43,209 +43,170 @@ AI PM Tools supports installation across **11 different AI platforms** to match 
 
 ---
 
-## 🤖 AI Agents
+## 🤖 AI Agents (8 Specialized Agents)
 
 ### Product Team
-| Agent | Role | Key Capabilities |
-|-------|------|------------------|
-| **Product Strategy** | Portfolio & Strategy | Competitive analysis, AI prioritization, roadmapping, 6-pagers |
-| **Product Manager** | Execution & Delivery | PRDs, user stories, epics, release notes, status reports |
-| **Product Design** | UX & Research | User journeys, research synthesis, accessibility |
-| **Product Marketing** | GTM & Positioning | Launch plans, battlecards, messaging, demos |
+| Agent | Role | Commands | Key Capabilities |
+|-------|------|----------|------------------|
+| **Product Strategy** | Market Analysis & Prioritization | 6 | Market intelligence, competitive analysis, SWOT/Porter's Five Forces, AI prioritization, roadmapping |
+| **Product Manager** | Requirements & Execution | 8 | Use cases, PRDs, PR/FAQ, user stories, dependencies, release notes, status reports |
+| **Product Design** | UX & Research | 1 | User journeys, UI/UX design, interaction flows, research synthesis, accessibility |
+| **Product Marketing** | GTM & Positioning | 1 | Launch plans, battlecards, messaging, demos |
 
-### Engineering & Operations
-| Agent | Role | Key Capabilities |
-|-------|------|------------------|
-| **Engineering Architect** | Technical Strategy | Architecture design, feasibility, tech decisions |
-| **Quality Assurance** | Quality Engineering | Test plans, automation strategy, risk assessment |
-| **SRE Operations** | Reliability & Scale | Incident response, capacity planning, monitoring |
+### Engineering & Quality
+| Agent | Role | Commands | Key Capabilities |
+|-------|------|----------|------------------|
+| **Engineering Architect** | Technical Strategy | 1 | Architecture design, feasibility, system blueprints, tech decisions |
+| **Quality Assurance** | Quality Engineering | 1 | Test plans, automation strategy, risk assessment |
 
-### Data & Growth
-| Agent | Role | Key Capabilities |
-|-------|------|------------------|
-| **Product Operations** | Metrics & Analytics | KPIs, experimentation, data analysis, dashboards |
-| **Customer Success** | Adoption & Retention | Feedback analysis, health scoring, NPS insights |
-
-### Cross-Functional
-| Agent | Role | Key Capabilities |
-|-------|------|------------------|
-| **Sales & Marketing** | Revenue Enablement | Sales tools, competitive intel, win/loss analysis |
-| **Technical Program Manager** | Coordination | Dependencies, risks, charters, status reports |
-| **Agile Coach** | Team Optimization | Retrospectives, ceremonies, team health |
+### Growth & Enablement
+| Agent | Role | Commands | Key Capabilities |
+|-------|------|----------|------------------|
+| **Sales and Marketing** | Sales Enablement | 3 | Competitive battlecards, demo scripts, win/loss analysis |
+| **Customer Success** | Customer Feedback & VOC | 2 | Public feedback collection, sentiment analysis, insight synthesis, adoption metrics |
 
 ---
 
-## 📋 Commands by Product Lifecycle
+## 📋 Commands by PM Phase (22 Commands)
 
-### 🔍 Discovery & Strategy
-Build your product vision and strategy.
+AI PM Tools provides **22 PM-focused commands** organized across the 9 product management phases.
 
+### 01 - Strategy (3 commands)
 | Command | Description | Skill |
 |---------|-------------|-------|
-| `/prioritize-ai-usecases` | Evaluate AI initiatives using VALUE/(RISK+COST) | ✅ ai-usecase-prioritization |
-| `/create-lean-canvas` | Product strategy canvas | 📋 lean-canvas |
-| `/analyze-competition` | Competitive & market analysis | 📋 competitive-intelligence |
-| `/create-six-pager` | Amazon-style strategic narrative | — |
+| `/analyze-market` | Market & competitive intelligence | ✅ ai-market-trends |
+| `/analyze-competition` | Competitive landscape analysis | ✅ ai-market-trends |
+| `/synthesize-strategy-analysis` | Refine SWOT and Five Forces with all sources | — |
 
-### 📊 Planning & Requirements
-Transform strategy into actionable plans.
-
+### 02 - Planning (3 commands)
 | Command | Description | Skill |
 |---------|-------------|-------|
-| `/create-product-brief` | One-page product brief | — |
+| `/generate-usecases` | AI use case portfolio generation | ✅ ai-usecase-generator |
+| `/prioritize-ai-usecases` | VALUE/(RISK+COST) prioritization | ✅ ai-usecase-prioritization |
+| `/build-roadmap` | Strategic product roadmap | — |
+
+### 03 - Design (3 commands)
+| Command | Description | Skill |
+|---------|-------------|-------|
+| `/create-blueprint` | Comprehensive product blueprint | ✅ ai-usecase-blueprint |
+| `/create-lean-canvas` | One-page strategic overview | ✅ ai-usecase-blueprint |
+| `/create-ux-design` | Design user interface and interaction flows | — |
+
+### 04 - Requirements (2 commands)
+| Command | Description | Skill |
+|---------|-------------|-------|
+| `/write-requirements` | Comprehensive PRD | — |
 | `/create-prfaq` | Amazon PR/FAQ document | — |
-| `/write-requirements` | Comprehensive PRD | 📋 requirements-engineering |
-| `/create-roadmap-epics` | Generate epics from roadmap | 📋 product-roadmapping |
-| `/build-roadmap` | Strategic product roadmap | 📋 product-roadmapping |
 
-### 🎨 Design & Development
-Build and ship quality products.
-
+### 05 - Backlog (2 commands)
 | Command | Description | Skill |
 |---------|-------------|-------|
-| `/design-user-journey` | User journey mapping | — |
-| `/create-epic-stories` | User stories from epics | 📋 requirements-engineering |
+| `/create-epic-stories` | User stories from epics | — |
+| `/track-dependencies` | Cross-team dependency tracking | — |
+
+### 06 - Prototype
+*Future commands for PM-created prototypes with Cursor/Claude Code*
+
+### 07 - Quality (1 command)
+| Command | Description | Skill |
+|---------|-------------|-------|
 | `/create-test-plan` | QA & testing strategy | — |
-| `/create-release-notes` | Release notes from changelog | — |
-| `/create-release-blog` | External release blog post | — |
 
-### 🚀 Go-To-Market
-Launch and grow your product.
-
+### 08 - Launch (5 commands)
 | Command | Description | Skill |
 |---------|-------------|-------|
-| `/plan-product-launch` | GTM launch planning | 📋 gtm-planning |
-| `/create-success-metrics` | KPI dashboard design | 📋 metrics-dashboard |
-| `/analyze-user-feedback` | Feedback synthesis & analysis | — |
-
-### ⚙️ Product Operations
-Keep your team aligned and informed.
-
-| Command | Description | Skill |
-|---------|-------------|-------|
+| `/plan-product-launch` | GTM launch planning | — |
+| `/create-release-notes` | Release notes generation | — |
+| `/create-battlecard` | Competitive battlecards | — |
+| `/create-demo-script` | Product demo scripts | — |
 | `/generate-status-report` | Executive status updates | — |
 
-### 🛠️DevOps and SRE
-
-<details>
-<summary><b>SRE Operations</b> (4 commands)</summary>
-
-| Command | Description |
-|---------|-------------|
-| `/create-incident-report` | Post-mortem incident analysis |
-| `/plan-capacity` | Capacity planning & forecasting |
-| `/create-runbook` | Operational runbooks |
-| `/analyze-system-health` | System health dashboards |
-
-</details>
-
-<details>
-<summary><b>Sales & Marketing</b> (4 commands)</summary>
-
-| Command | Description |
-|---------|-------------|
-| `/create-sales-enablement` | Sales training materials |
-| `/create-battlecard` | Competitive battlecards |
-| `/create-demo-script` | Product demo scripts |
-| `/analyze-win-loss` | Win/loss analysis |
-
-</details>
-
-<details>
-<summary><b>Program Management</b> (4 commands)</summary>
-
-| Command | Description |
-|---------|-------------|
-| `/create-project-charter` | Program charter documents |
-| `/track-dependencies` | Dependency tracking |
-| `/create-risk-register` | Risk assessment & mitigation |
-| `/create-status-update` | Program status reports |
-
-</details>
-
-<details>
-<summary><b>Agile Coaching</b> (4 commands)</summary>
-
-| Command | Description |
-|---------|-------------|
-| `/facilitate-retrospective` | Retrospective facilitation |
-| `/plan-sprint` | Sprint planning assistance |
-| `/create-team-charter` | Team working agreements |
-| `/assess-team-health` | Team health assessments |
-
-</details>
+### 09 - Feedback (3 commands)
+| Command | Description | Skill |
+|---------|-------------|-------|
+| `/analyze-win-loss` | Win/loss analysis | — |
+| `/analyze-customer-feedback` | Collect feedback from G2, Reddit, reviews | — |
+| `/synthesize-customer-feedback` | Extract insights from customer feedback | — |
 
 ---
 
 ## 🛠️ Skills Library
 
 ### ✅ Available Now
-- **ai-usecase-prioritization** - Enterprise AI prioritization framework with Excel dashboards
+
+| Skill | Phase | Description | Commands |
+|-------|-------|-------------|----------|
+| **ai-market-trends** | 01_Strategy | Market intelligence: SWOT, Porter's Five Forces, Competitive Landscape. Outputs: market-overview.md, swot-analysis.md, five-forces-analysis.md | `/analyze-market`, `/analyze-competition` |
+| **ai-usecase-generator** | 02_Planning | Generate 5 AI use cases mapped to Strategic Pillars Quadrant. Outputs: usecases-summary.md, usecase-01-{slug}.md through usecase-05-{slug}.md | `/generate-usecases` |
+| **ai-usecase-prioritization** | 02_Planning | VALUE/(RISK+COST) scoring with Excel dashboards. Outputs: prioritization-scores.xlsx, comparison/justification.md | `/prioritize-ai-usecases` |
+| **ai-usecase-blueprint** | 03_Design | Comprehensive 14-16 page blueprints with pricing, architecture, RAI. Outputs: blueprint-{name}.md, lean-canvas-{name}.md | `/create-blueprint`, `/create-lean-canvas` |
+
+**See [METHODOLOGY.md](METHODOLOGY.md)** for complete 9-phase framework, filename standards, and tool recommendations.
 
 ### 📋 Coming Soon
-Future skills that will power the commands above:
+Future skills aligned with 9 PM phases:
 
-- **lean-canvas** - Lean/Product Canvas creation
-- **competitive-intelligence** - Market analysis frameworks
-- **product-roadmapping** - Roadmap formats (Now/Next/Later, Timeline, Theme-based)
-- **requirements-document** - PRD templates
-- **requirements-epics-stories** - Agile epic and story templates
-- **gtm-planning** - Launch planning frameworks
-- **metrics-dashboard** - Analytics & KPI design
-- **sre-practices** - SRE methodologies and runbooks
-- **sales-enablement** - Sales tools and frameworks
-- **program-management** - TPM frameworks and templates
-- **agile-ceremonies** - Agile coaching frameworks
+- **04_Requirements**: PRD and technical specification generation
+- **05_Backlog**: Epic and story breakdown with acceptance criteria
+- **06_Prototype**: PM-created prototypes using Cursor/Claude Code
+- **07_Quality**: Test plans, AI evaluations, quality metrics
+- **08_Launch**: GTM planning, sales enablement, release management
+- **09_Feedback**: Customer feedback synthesis, win-loss analysis, iteration planning
 
-> 💡 **Contribute**: Want to add or enhance one of these skills? See [CONTRIBUTING.md](CONTRIBUTING.md)
+> 💡 **Contribute**: Want to build one of these skills? See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
 ## 💡 Example Workflows
 
-### Workflow 1: AI Initiative Planning
+### Workflow 1: AI Product Strategy (Full 9-Phase)
 ```bash
-# 1. Prioritize AI use cases
+# 01_Strategy: Market Research
+/analyze-market
+
+# 02_Planning: Use Case Discovery & Prioritization
+/generate-usecases
 /prioritize-ai-usecases
 
-# 2. Create strategic document
-/create-six-pager
+# 03_Design: Product Blueprint
+/create-blueprint
 
-# 3. Build implementation roadmap
-/build-roadmap
-
-# 4. Break into epics
-/create-roadmap-epics
-```
-
-### Workflow 2: Feature Development
-```bash
-# 1. Write requirements
+# 04_Requirements: Detailed Specs
 /write-requirements
+/create-prfaq
 
-# 2. Create user stories
+# 05_Backlog: Story Breakdown
 /create-epic-stories
 
-# 3. Plan testing
+# 06_Prototype: (Future - PM-created POCs)
+
+# 07_Quality: Testing Strategy
 /create-test-plan
 
-# 4. Generate release notes
+# 08_Launch: Go-to-Market
+/plan-product-launch
+/create-battlecard
+/create-release-notes
+
+# 09_Feedback: Post-Launch Learning
+/analyze-win-loss
+```
+
+### Workflow 2: Quick Feature Launch
+```bash
+# Requirements → Backlog → Quality → Launch
+/write-requirements
+/create-epic-stories
+/create-test-plan
 /create-release-notes
 ```
 
-### Workflow 3: Product Launch
+### Workflow 3: Competitive Response
 ```bash
-# 1. Competitive analysis
+# Strategy → Planning → Design
 /analyze-competition
-
-# 2. Create GTM plan
-/plan-product-launch
-
-# 3. Sales enablement
-/create-sales-enablement
-
-# 4. Define metrics
-/create-success-metrics
+/generate-usecases
+/create-lean-canvas
 ```
 
 ---

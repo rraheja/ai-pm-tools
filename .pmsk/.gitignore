@@ -1,0 +1,15 @@
+# Ignore user-specific config overrides
+# Keep the default config.yaml checked in for reference
+
+# Ignore local user modifications (if users create these)
+config.local.yaml
+config.override.yaml
+*.local.yaml
+
+# Keep the default config.yaml (tracked)
+!config.yaml
+
+# Ignore any generated cache or temp files
+.cache/
+.tmp/
+*.tmp

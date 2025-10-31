@@ -150,10 +150,10 @@ Normalized Score = (Priority Score / 13.5) × 100
 
 1. **Read this SKILL.md** - Understand formula, tiers, criteria
 2. **Gather context** - Ask about vision, initiatives, OKRs, strategy, users, resources, risk tolerance
-3. **Create comparison matrix** (`docs/comparison_matrix.md`) - List initiatives side-by-side with factual differences before scoring
+3. **Create comparison matrix** (`templates/comparison_matrix.md`) - List initiatives side-by-side with factual differences before scoring
 4. **Score systematically** - Use criteria and checklists above
 5. **Validate** - Challenge scores e.g. If Initiative A > Impact, why lower Adoption? Equal scores = document why
-6. **Document rationale** - Complete justification template (`docs/scoring_justification.md`) for transparency
+6. **Document rationale** - Complete justification template (`templates/scoring_justification.md`) for transparency
 7. **Generate Excel** - Use Template.xlsx, fill yellow cells only (A, B-H, O), run recalc.py
 8. **Provide analysis** - Explain scores, compare strengths/weaknesses, recommend by tier
 
@@ -163,13 +163,15 @@ Normalized Score = (Priority Score / 13.5) × 100
 
 ### Files
 
-**Excel Assets:**
-- `assets/AI_Use_Case_Prioritization_Template.xlsx` - Blank (use this)
-- `assets/AI_Use_Case_Prioritization_Example.xlsx` - Reference for examples only (do not use)
+**Excel Template:**
+- `templates/AI_Use_Case_Prioritization_Template.xlsx` - User-fillable template (use this)
+
+**Excel Example:**
+- `assets/AI_Use_Case_Prioritization_Example.xlsx` - Read-only reference (do not modify)
 
 **Documentation Templates:**
-- `docs/scoring_justification.md` - Systematic score documentation
-- `docs/comparison_matrix.md` - Side-by-side initiative comparison
+- `templates/scoring_justification.md` - Systematic score documentation
+- `templates/comparison_matrix.md` - Side-by-side initiative comparison
 
 ### Excel Template Structure
 **Data Tab - Fill yellow cells only:**
@@ -215,15 +217,6 @@ Normalized Score = (Priority Score / 13.5) × 100
 
 ## Best Practices
 
-### For Product Managers
-- Don't game scores - Use judgment
-- Phase-appropriate scoring - Pilot ≠ scale
-- Update as you learn - Reassess readiness
-- Framework informs, doesn't decide
-- Flag strategic exceptions
-- Document assumptions
-
-### For Claude
 - Ask clarifying questions - Don't guess
 - Explain trade-offs clearly
 - Reference real-world benchmarks
@@ -294,6 +287,27 @@ Claude:
 8. Delivers spreadsheet + analysis with rationale
 ```
 
+---
+
+## Input Dependencies
+
+**Optional Inputs** (all optional, LLM decides whether to use or ask user):
+
+**From ai-usecase-generator skill** (if available):
+- `usecase-01-{slug}.md` through `usecase-05-{slug}.md` - Individual use case descriptions with problem statements, target users, and value propositions
+- `usecases-summary.md` - Portfolio overview with quadrant mapping
+
+**From user-provided information** (if available):
+- List of AI initiatives or projects to prioritize
+- Strategic goals and constraints
+- Resource availability and budget
+- Timeline requirements
+- Risk tolerance and governance requirements
+
+**Note**: This skill can work with just use case names if detailed descriptions aren't available. The LLM should ask clarifying questions to gather enough information for scoring VALUE, RISK, and COST dimensions.
+
+---
+
 ## Output Deliverables
 
 - **Prioritized AI Initiative Ranking** with objective 0-100 scores
@@ -303,6 +317,22 @@ Claude:
 - **Strategic Recommendations** by priority tier with clear next steps
 - **Executive Summary** suitable for C-level stakeholder communication
 - **Risk Assessment** highlighting governance needs for high-consequence initiatives
+
+---
+
+## Integration with Other Skills
+
+**This Skill's Outputs Feed Into**:
+- `ai-usecase-blueprint`: Prioritization scores and strategic recommendations inform which use cases to develop detailed blueprints for
+- Product roadmapping: Priority rankings guide quarterly and annual planning
+- Resource allocation: Scores justify budget and team assignments
+- Executive decision-making: Objective framework supports go/no-go decisions
+
+**Upstream Dependencies**:
+- `ai-usecase-generator`: Provides use case descriptions that can be scored
+- `ai-market-trends`: Provides strategic context for Differentiation scoring
+
+**Note**: This skill can be used independently of other skills - it only requires a list of initiatives to compare and score.
 
 ---
 *Skill Category: Discovery & Strategy*  

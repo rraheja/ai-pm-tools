@@ -1,16 +1,16 @@
 ---
 name: ai-usecase-generator
-description: Analyze organization documents, market research, and customer feedback to generate a strategic portfolio of top 10 AI use case ideas. Maps ideas to the Strategic Pillars Quadrant (AI Actions vs Human Involvement) with high-level summaries. Use when helping organizations identify AI opportunities, build AI strategy, or create an AI use case portfolio. Does not prioritize (use ai-usecase-prioritization) or create detailed specs (use ai-usecase-blueprint).
+description: Analyze organization documents, market research, and customer feedback to generate a strategic portfolio of top 5 AI use case ideas. Maps ideas to the Strategic Pillars Quadrant (AI Actions vs Human Involvement) with high-level summaries. Use when helping organizations identify AI opportunities, build AI strategy, or create an AI use case portfolio. Does not prioritize (use ai-usecase-prioritization) or create detailed specs (use ai-usecase-blueprint).
 allowed-tools: Read, Write, Grep, Glob, WebSearch
 ---
 
 # AI Use Case Generator
 
-Generate a strategic portfolio of AI use cases by analyzing organizational context, market intelligence, and customer needs. Output a curated list of 10 AI opportunities mapped to strategic pillars with high-level details for executive review.
+Generate a strategic portfolio of AI use cases by analyzing organizational context, market intelligence, and customer needs. Output a curated list of 5 AI opportunities mapped to strategic pillars with high-level details for executive review.
 
 ## Purpose
 
-Systematic discovery methodology for identifying AI opportunities by analyzing organizational documents, market intelligence, and industry trends to generate a portfolio of 10 strategically-mapped use case ideas with high-level summaries for executive decision-making.
+Systematic discovery methodology for identifying AI opportunities by analyzing organizational documents, market intelligence, and industry trends to generate a portfolio of 5 strategically-mapped use case ideas with high-level summaries for executive decision-making.
 
 ## When to Use This Skill
 
@@ -58,14 +58,14 @@ Use this skill when users need to:
    - Revenue targets and growth areas
    - Risk factors and constraints
 
-2. **Synthesis**: Identify 10-15 potential AI use cases that:
+2. **Synthesis**: Identify 7-10 potential AI use cases that:
    - Align with strategic goals
    - Address customer pain points
    - Fill capability gaps
    - Leverage industry best practices
    - Consider competitive positioning
 
-3. **Filter to Top 10**: Select the most promising based on:
+3. **Filter to Top 5**: Select the most promising based on:
    - Strategic alignment
    - Feasibility indicators
    - Market validation (competitors/trends)
@@ -106,7 +106,7 @@ Map each use case to the **Strategic Pillars Quadrant**:
 
 ### Phase 4: Output Generation
 
-For each use case, create a **high-level summary** following the structure in `references/use-case-template.md`. Fill all fields defined in that template to ensure future template updates are automatically incorporated.
+For each use case, create a **high-level summary** following the structure in `templates/use-case-template.md`. Fill all fields defined in that template to ensure future template updates are automatically incorporated.
 
 **Important**: Keep each field to 2-3 lines maximum. This is a portfolio view, not detailed planning.
 
@@ -171,7 +171,7 @@ Ask: "Can the AI operate without human approval?"
 - Treating all recommendations as know-how (if AI executes → Actionable)
 - Overweighting minor touchpoints (setup/config ≠ intervention)
 
-**For detailed industry examples and real-world use cases, see `references/industry-examples.md`**
+**For detailed industry examples and real-world use cases, see `templates/industry-examples.md`**
 
 ---
 
@@ -219,17 +219,17 @@ Define: What (specific AI application), Who (target user), Why (business value),
 **Step 4: Validate and Filter**
 Assess: Strategic alignment, Customer value, Feasibility, Differentiation
 
-**Step 5: Select Top 10**
+**Step 5: Select Top 5**
 Balance: Multiple quadrants, Quick wins vs. strategic bets, Different stakeholders, Offensive and defensive plays
 
-**For detailed extraction examples and methodology walkthroughs, see `references/industry-examples.md`**
+**For detailed extraction examples and methodology walkthroughs, see `templates/industry-examples.md`**
 
 ---
 
 ## Output Formats
 
 ### 1. Strategic Pillars Quadrant Visualization
-Create a 2x2 matrix showing all 10 use cases positioned by:
+Create a 2x2 matrix showing all 5 use cases positioned by:
 - X-axis: Know-how ← → Actionable
 - Y-axis: Human Intervention ← → Autonomous
 
@@ -239,9 +239,9 @@ Generate a comparison table with columns:
 |---|----------|----------|---------------|----------|---------|------------|------|
 
 ### 3. Individual Markdown Files
-Save each use case to a separate markdown file: `usecase_01_[name].md` through `usecase_10_[name].md`
+Save each use case to a separate markdown file: `usecase_01_[name].md` through `usecase_05_[name].md`
 
-**Use the template structure defined in `references/use-case-template.md`** - fill all fields present in that template. This ensures any future template updates are automatically incorporated into generated use cases.
+**Use the template structure defined in `templates/use-case-template.md`** - fill all fields present in that template. This ensures any future template updates are automatically incorporated into generated use cases.
 
 ### 4. Format Options
 After generating the portfolio, ask the user which format they prefer:
@@ -254,7 +254,7 @@ After generating the portfolio, ask the user which format they prefer:
 
 ### Scope and Focus
 - **Stay High-Level**: This is portfolio discovery, not detailed planning (keep fields to 2-3 lines)
-- **Limit to 10**: More than 10 creates decision paralysis; fewer than 10 lacks optionality
+- **Limit to 5**: More than 5 creates decision paralysis; fewer than 5 lacks optionality
 - **Balanced Portfolio**: Ensure use cases span all four quadrants for strategic diversity
 - **Industry Agnostic**: Don't assume an industry unless specified or obvious from documents
 - **Save Markdown**: Individual files per use case enable other skills to process them without re-reading source documents
@@ -297,7 +297,28 @@ When analyzing organizations, consider these typical AI opportunity patterns (no
 - **Manufacturing**: Predictive maintenance (Q1), quality inspection (Q2), autonomous robots (Q4), assisted workflows (Q3)
 - **Technology/SaaS**: Code generation (Q3), customer support (Q4), analytics (Q1), automated testing (Q3)
 
-**For detailed industry-specific examples with real-world context, see `references/industry-examples.md`**
+**For detailed industry-specific examples with real-world context, see `templates/industry-examples.md`**
+
+## Input Dependencies
+
+**Optional Inputs** (all optional, LLM decides whether to use or ask user):
+
+**From ai-market-trends skill** (if available):
+- `swot-analysis.md` - Strategic goals, competitive positioning, market opportunities
+- `industry-trends.md` - Industry context, growth drivers, technology shifts
+- `competitive-landscape.md` - Competitor capabilities and differentiation gaps
+- `market-overview.md` or `company-analysis.md` - Company profile and strategic priorities
+
+**From user-provided documents** (if available):
+- Vision/mission/strategy documents
+- Annual reports or business plans
+- Customer feedback/VOC data
+- Support ticket summaries or top issues
+- Competitive intelligence
+
+**Note**: This skill can work independently with web research if no prior artifacts are available. The LLM should assess what's available and either use existing artifacts or conduct fresh research as needed.
+
+---
 
 ## Integration with Other Skills
 
@@ -330,7 +351,7 @@ User sees competitors launching AI capabilities and needs to respond. Research c
 User lacks comprehensive documents. Rely on web research for industry trends and competitor analysis, conduct interactive discovery through questions, generate use cases based on common industry patterns.
 
 **Scenario 5: Specific Domain Focus**
-User wants AI opportunities for specific function (customer service, operations, sales). Filter analysis to relevant domains, generate targeted 10 use cases, ensure balanced quadrant distribution within scope.
+User wants AI opportunities for specific function (customer service, operations, sales). Filter analysis to relevant domains, generate targeted 5 use cases, ensure balanced quadrant distribution within scope.
 
 ## Common Pitfalls
 
@@ -367,7 +388,7 @@ Q2: Know-how + Autonomous (In-context AI)
 Q3: Actionable + Intervention (Workflows)
 Q4: Actionable + Autonomous (Agents)
 
-OUTPUT: 10 use cases with:
+OUTPUT: 5 use cases with:
 - Name, Quadrant, Target Market, Customer
 - Problem, Value Prop, Cost Estimate
 
@@ -395,11 +416,11 @@ You:
 
 3. Performs web research: [Searches for healthcare AI trends, competitor analysis]
 
-4. Analyzes and generates: [Creates 10 use cases with quadrant mapping]
+4. Analyzes and generates: [Creates 5 use cases with quadrant mapping]
 
 5. Outputs:
    - Strategic Pillars Quadrant visualization
-   - Comparison table of all 10 use cases
+   - Comparison table of all 5 use cases
    - Individual markdown files
    - "Would you like this in Word, PDF, or PowerPoint format?"
 
@@ -408,9 +429,9 @@ You:
 
 ## Output Deliverables
 
-- **Strategic Pillars Quadrant Visualization** - 2x2 matrix with all 10 use cases positioned
+- **Strategic Pillars Quadrant Visualization** - 2x2 matrix with all 5 use cases positioned
 - **Use Case Summary Table** - Comparison table with all key fields
-- **Individual Markdown Files** - One file per use case (`usecase_01_[name].md` through `usecase_10_[name].md`)
+- **Individual Markdown Files** - One file per use case (`usecase_01_[name].md` through `usecase_05_[name].md`)
 - **Executive Summary Report** - Consolidated analysis with recommendations
 - **Format Options** - Available in Markdown, Word (.docx), PDF, or PowerPoint (.pptx)
 - **Next Steps Guidance** - Clear direction to ai-usecase-prioritization and ai-usecase-blueprint skills
@@ -418,8 +439,8 @@ You:
 ## References
 
 **Reference files (load as needed)**:
-- `references/use-case-template.md` - Markdown output template structure (always use this for generating use case files)
-- `references/industry-examples.md` - Detailed industry-specific examples, real-world use cases, and methodology walkthroughs (load when user needs deeper context or industry-specific guidance)
+- `templates/use-case-template.md` - Markdown output template structure (always use this for generating use case files)
+- `templates/industry-examples.md` - Detailed industry-specific examples, real-world use cases, and methodology walkthroughs (load when user needs deeper context or industry-specific guidance)
 
 **When to load industry-examples.md**:
 - User asks for specific industry examples beyond brief mentions above

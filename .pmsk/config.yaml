@@ -1,0 +1,58 @@
+# PMSpecKit Configuration File
+#
+# Configuration Hierarchy (first found wins):
+#   1. Project-level: <project_root>/.pmsk/config.yaml (highest priority, preferred)
+#   2. User-level: ~/.config/pmsk/config.yaml (fallback)
+#   3. Hardcoded defaults: Skills output to current directory if no config found
+#
+# For detailed methodology and filename standards, see: METHODOLOGY.md
+
+# PROJECT METADATA
+
+project-name: "My AI Product"
+framework: "PMSpecKit"
+version: "2.0"
+
+# PHASE DIRECTORIES
+# Skills read these variables to determine output location.
+# If directory doesn't exist, skill will notify user and output to current directory.
+
+STRATEGY_DIR: "01_Strategy"          # ai-market-trends
+PLANNING_DIR: "02_Planning"          # ai-usecase-generator, ai-usecase-prioritization
+DESIGN_DIR: "03_Design"              # ai-usecase-blueprint
+REQUIREMENTS_DIR: "04_Requirements"  # Future: PRD and requirements skills
+BACKLOG_DIR: "05_Backlog"            # Future: Epic and story breakdown
+PROTOTYPE_DIR: "06_Prototype"        # Future: PM-created prototypes with Cursor/Claude
+QUALITY_DIR: "07_Quality"            # Future: Test plans and quality metrics
+LAUNCH_DIR: "08_Launch"              # Future: Go-to-market and launch planning
+FEEDBACK_DIR: "09_Feedback"          # Future: Customer feedback and VOC analysis
+
+# FILENAME OVERRIDES (Optional)
+# Default filenames documented in METHODOLOGY.md. Customize only if needed.
+
+filenames:
+  # Strategy Phase (ai-market-trends)
+  market-overview: "market-overview.md"
+  swot-analysis: "swot-analysis.md"
+  five-forces-analysis: "five-forces-analysis.md"
+  market-sources: "market-sources.md"
+
+  # Planning Phase (ai-usecase-generator)
+  usecases-summary: "usecases-summary.md"
+  usecase-pattern: "usecase-{NN}-{slug}.md"        # {NN} = 01-10, {slug} = auto-generated
+  usecases-quadrant: "usecases-quadrant.md"
+
+  # Planning Phase (ai-usecase-prioritization)
+  prioritization-scores: "prioritization-scores.xlsx"
+  prioritization-comparison: "prioritization-comparison.md"
+  prioritization-justification: "prioritization-justification.md"
+
+  # Design Phase (ai-usecase-blueprint)
+  blueprint-pattern: "blueprint-{name}.md"         # {name} = use case name
+  lean-canvas-pattern: "lean-canvas-{name}.md"     # Optional Lean Canvas output
+
+# BEHAVIOR OPTIONS
+
+archive-existing: true        # Move old files to _archive/{timestamp}/ on re-run (set false to overwrite)
+
+---

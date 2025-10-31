@@ -2,30 +2,30 @@
   "schema_version": "1.0",
   "name": "ai-pm-tools",
   "display_name": "AI PM Tools",
-  "version": "1.0.0",
-  "description": "Enterprise product management toolkit with specialized agents, commands, and frameworks",
+  "version": "2.0.0",
+  "description": "Enterprise PM toolkit with 8 specialized agents, 22 commands, and 4 production-ready skills for the complete product lifecycle",
   "type": "mcp_plugin",
   "agents": [
     {
       "id": "product-strategy",
       "name": "Product Strategy Agent",
-      "description": "Portfolio planning, roadmaps, competitive positioning, and strategic decision-making",
+      "description": "Market analysis, competitive intelligence, AI use case prioritization, and strategic roadmapping",
       "file": "agents/product-strategy.md",
-      "commands": ["prioritize-ai-usecases", "create-lean-canvas", "analyze-competition", "create-six-pager", "build-roadmap"]
+      "commands": ["analyze-market", "analyze-competition", "synthesize-strategy-analysis", "build-roadmap", "prioritize-ai-usecases", "create-lean-canvas"]
     },
     {
       "id": "product-manager",
       "name": "Product Manager Agent",
-      "description": "Requirements, features, backlog management, and delivery execution",
+      "description": "Requirements, PRDs, user stories, backlog management, and delivery execution",
       "file": "agents/product-manager.md",
-      "commands": ["create-product-brief", "create-prfaq", "write-requirements", "create-roadmap-epics", "create-epic-stories", "create-release-notes", "create-release-blog", "generate-status-report"]
+      "commands": ["generate-usecases", "create-blueprint", "write-requirements", "create-prfaq", "create-epic-stories", "track-dependencies", "create-release-notes", "generate-status-report"]
     },
     {
       "id": "product-design",
       "name": "Product Design Agent",
-      "description": "UX research, design thinking, user journeys, and experience design",
+      "description": "UX research, user journeys, interaction design, and design systems (includes UX research capabilities)",
       "file": "agents/product-design.md",
-      "commands": ["design-user-journey"]
+      "commands": ["create-ux-design"]
     },
     {
       "id": "product-marketing",
@@ -37,293 +37,192 @@
     {
       "id": "engineering-architect",
       "name": "Engineering Architect Agent",
-      "description": "Technical feasibility, system architecture, design decisions, and technical strategy",
+      "description": "Technical feasibility, system architecture, and technical strategy",
       "file": "agents/engineering-architect.md",
-      "commands": []
+      "commands": ["create-blueprint"]
     },
     {
       "id": "quality-assurance",
       "name": "Quality Assurance Agent",
-      "description": "Test strategy, quality metrics, risk assessment, and quality engineering",
+      "description": "Test strategy, quality metrics, and QA engineering",
       "file": "agents/quality-assurance.md",
       "commands": ["create-test-plan"]
     },
     {
-      "id": "sre-operations",
-      "name": "SRE Operations Agent",
-      "description": "Site reliability, incident management, monitoring, and capacity planning",
-      "file": "agents/sre-operations.md",
-      "commands": ["create-incident-report", "plan-capacity", "create-runbook", "analyze-system-health"]
-    },
-    {
-      "id": "product-operations",
-      "name": "Product Operations Agent",
-      "description": "Metrics, KPIs, experimentation, data analysis, and operational excellence",
-      "file": "agents/product-operations.md",
-      "commands": ["create-success-metrics", "analyze-user-feedback"]
+      "id": "sales-and-marketing",
+      "name": "Sales and Marketing Agent",
+      "description": "Sales enablement, competitive battlecards, demos, and win-loss analysis",
+      "file": "agents/sales-and-marketing.md",
+      "commands": ["create-battlecard", "create-demo-script", "analyze-win-loss"]
     },
     {
       "id": "customer-success",
       "name": "Customer Success Agent",
-      "description": "User feedback, adoption metrics, customer health, and success planning",
+      "description": "Customer feedback, adoption metrics, and success planning",
       "file": "agents/customer-success.md",
-      "commands": []
-    },
-    {
-      "id": "sales-marketing",
-      "name": "Sales and Marketing Agent",
-      "description": "Sales enablement, competitive intelligence, deal support, and field feedback",
-      "file": "agents/sales-marketing.md",
-      "commands": ["create-sales-enablement", "create-battlecard", "create-demo-script", "analyze-win-loss"]
-    },
-    {
-      "id": "technical-program-manager",
-      "name": "Technical Program Manager Agent",
-      "description": "Program coordination, dependency management, risk tracking, and cross-team delivery",
-      "file": "agents/technical-program-manager.md",
-      "commands": ["create-project-charter", "track-dependencies", "create-risk-register", "create-status-update"]
-    },
-    {
-      "id": "agile-coach",
-      "name": "Agile Coach Agent",
-      "description": "Sprint planning, ceremonies, team health, retrospectives, and agile practices",
-      "file": "agents/agile-coach.md",
-      "commands": ["facilitate-retrospective", "plan-sprint", "create-team-charter", "assess-team-health"]
+      "commands": ["analyze-customer-feedback", "synthesize-customer-feedback"]
     }
   ],
   "commands": [
     {
-      "name": "prioritize-ai-usecases",
-      "description": "AI Use Case Prioritization using VALUE/(RISK+COST) framework",
-      "category": "discovery-strategy",
-      "file": "commands/discovery-strategy/prioritize-ai-usecases.md",
-      "skill": "ai-usecase-prioritization"
-    },
-    {
-      "name": "create-lean-canvas",
-      "description": "Create Lean Canvas for product strategy",
-      "category": "discovery-strategy",
-      "file": "commands/discovery-strategy/create-lean-canvas.md",
-      "skill": "lean-canvas"
+      "name": "analyze-market",
+      "description": "Market intelligence using SWOT, Porter's Five Forces, and competitive analysis",
+      "category": "01-strategy",
+      "file": "commands/01-strategy/analyze-market.md",
+      "skill": "ai-market-trends"
     },
     {
       "name": "analyze-competition",
-      "description": "Competitive and market analysis",
-      "category": "discovery-strategy",
-      "file": "commands/discovery-strategy/analyze-competition.md",
-      "skill": "competitive-intelligence"
+      "description": "Competitive landscape and strategic positioning analysis",
+      "category": "01-strategy",
+      "file": "commands/01-strategy/analyze-competition.md",
+      "skill": "ai-market-trends"
     },
     {
-      "name": "create-six-pager",
-      "description": "Amazon-style 6-pager document",
-      "category": "discovery-strategy",
-      "file": "commands/discovery-strategy/create-six-pager.md"
+      "name": "synthesize-strategy-analysis",
+      "description": "Synthesize research to produce refined SWOT and Five Forces analysis",
+      "category": "01-strategy",
+      "file": "commands/01-strategy/synthesize-strategy-analysis.md"
     },
     {
-      "name": "create-product-brief",
-      "description": "One-page product brief",
-      "category": "planning-requirements",
-      "file": "commands/planning-requirements/create-product-brief.md"
+      "name": "generate-usecases",
+      "description": "Generate 5 AI use cases mapped to Strategic Pillars Quadrant",
+      "category": "02-planning",
+      "file": "commands/02-planning/generate-usecases.md",
+      "skill": "ai-usecase-generator"
+    },
+    {
+      "name": "prioritize-ai-usecases",
+      "description": "AI use case prioritization using VALUE/(RISK+COST) framework",
+      "category": "02-planning",
+      "file": "commands/02-planning/prioritize-ai-usecases.md",
+      "skill": "ai-usecase-prioritization"
+    },
+    {
+      "name": "build-roadmap",
+      "description": "Strategic product roadmap planning",
+      "category": "02-planning",
+      "file": "commands/02-planning/build-roadmap.md"
+    },
+    {
+      "name": "create-blueprint",
+      "description": "Comprehensive product blueprint with architecture, pricing, and responsible AI",
+      "category": "03-design",
+      "file": "commands/03-design/create-blueprint.md",
+      "skill": "ai-usecase-blueprint"
+    },
+    {
+      "name": "create-lean-canvas",
+      "description": "One-page Lean Canvas for product strategy",
+      "category": "03-design",
+      "file": "commands/03-design/create-lean-canvas.md",
+      "skill": "ai-usecase-blueprint"
+    },
+    {
+      "name": "create-ux-design",
+      "description": "Design user interface, interaction flows, and UX patterns",
+      "category": "03-design",
+      "file": "commands/03-design/create-ux-design.md"
+    },
+    {
+      "name": "write-requirements",
+      "description": "Comprehensive Product Requirements Document (PRD)",
+      "category": "04-requirements",
+      "file": "commands/04-requirements/write-requirements.md"
     },
     {
       "name": "create-prfaq",
       "description": "Amazon-style PR/FAQ document",
-      "category": "planning-requirements",
-      "file": "commands/planning-requirements/create-prfaq.md"
-    },
-    {
-      "name": "write-requirements",
-      "description": "Product Requirements Document (PRD)",
-      "category": "planning-requirements",
-      "file": "commands/planning-requirements/write-requirements.md",
-      "skill": "requirements-engineering"
-    },
-    {
-      "name": "create-roadmap-epics",
-      "description": "Generate epics from roadmap",
-      "category": "planning-requirements",
-      "file": "commands/planning-requirements/create-roadmap-epics.md",
-      "skill": "product-roadmapping"
-    },
-    {
-      "name": "build-roadmap",
-      "description": "Strategic product roadmap",
-      "category": "planning-requirements",
-      "file": "commands/planning-requirements/build-roadmap.md",
-      "skill": "product-roadmapping"
-    },
-    {
-      "name": "design-user-journey",
-      "description": "User journey mapping",
-      "category": "design-development",
-      "file": "commands/design-development/design-user-journey.md"
+      "category": "04-requirements",
+      "file": "commands/04-requirements/create-prfaq.md"
     },
     {
       "name": "create-epic-stories",
-      "description": "Generate user stories from epics",
-      "category": "design-development",
-      "file": "commands/design-development/create-epic-stories.md",
-      "skill": "requirements-engineering"
+      "description": "Generate user stories from epics with acceptance criteria",
+      "category": "05-backlog",
+      "file": "commands/05-backlog/create-epic-stories.md"
+    },
+    {
+      "name": "track-dependencies",
+      "description": "Cross-team dependency mapping and tracking",
+      "category": "05-backlog",
+      "file": "commands/05-backlog/track-dependencies.md"
     },
     {
       "name": "create-test-plan",
       "description": "QA and testing strategy",
-      "category": "design-development",
-      "file": "commands/design-development/create-test-plan.md"
-    },
-    {
-      "name": "create-release-notes",
-      "description": "Release notes from changelog",
-      "category": "design-development",
-      "file": "commands/design-development/create-release-notes.md"
-    },
-    {
-      "name": "create-release-blog",
-      "description": "External release blog post",
-      "category": "design-development",
-      "file": "commands/design-development/create-release-blog.md"
+      "category": "07-quality",
+      "file": "commands/07-quality/create-test-plan.md"
     },
     {
       "name": "plan-product-launch",
-      "description": "GTM launch planning",
-      "category": "go-to-market",
-      "file": "commands/go-to-market/plan-product-launch.md",
-      "skill": "gtm-planning"
+      "description": "Go-to-market launch planning",
+      "category": "08-launch",
+      "file": "commands/08-launch/plan-product-launch.md"
     },
     {
-      "name": "create-success-metrics",
-      "description": "KPI dashboard design",
-      "category": "go-to-market",
-      "file": "commands/go-to-market/create-success-metrics.md",
-      "skill": "metrics-dashboard"
-    },
-    {
-      "name": "analyze-user-feedback",
-      "description": "User feedback synthesis and analysis",
-      "category": "go-to-market",
-      "file": "commands/go-to-market/analyze-user-feedback.md"
-    },
-    {
-      "name": "generate-status-report",
-      "description": "Executive status updates",
-      "category": "product-operations",
-      "file": "commands/product-operations/generate-status-report.md"
-    },
-    {
-      "name": "create-incident-report",
-      "description": "Post-mortem and incident analysis",
-      "category": "sre-operations",
-      "file": "commands/sre-operations/create-incident-report.md",
-      "skill": "sre-practices"
-    },
-    {
-      "name": "plan-capacity",
-      "description": "Capacity planning analysis",
-      "category": "sre-operations",
-      "file": "commands/sre-operations/plan-capacity.md",
-      "skill": "sre-practices"
-    },
-    {
-      "name": "create-runbook",
-      "description": "Operational runbook creation",
-      "category": "sre-operations",
-      "file": "commands/sre-operations/create-runbook.md",
-      "skill": "sre-practices"
-    },
-    {
-      "name": "analyze-system-health",
-      "description": "System health dashboard and analysis",
-      "category": "sre-operations",
-      "file": "commands/sre-operations/analyze-system-health.md",
-      "skill": "sre-practices"
-    },
-    {
-      "name": "create-sales-enablement",
-      "description": "Sales training and enablement materials",
-      "category": "sales-marketing",
-      "file": "commands/sales-marketing/create-sales-enablement.md",
-      "skill": "sales-enablement"
+      "name": "create-release-notes",
+      "description": "Release notes generation",
+      "category": "08-launch",
+      "file": "commands/08-launch/create-release-notes.md"
     },
     {
       "name": "create-battlecard",
-      "description": "Competitive battlecard",
-      "category": "sales-marketing",
-      "file": "commands/sales-marketing/create-battlecard.md",
-      "skill": "competitive-intelligence"
+      "description": "Competitive battlecard for sales enablement",
+      "category": "08-launch",
+      "file": "commands/08-launch/create-battlecard.md"
     },
     {
       "name": "create-demo-script",
-      "description": "Product demo script",
-      "category": "sales-marketing",
-      "file": "commands/sales-marketing/create-demo-script.md"
+      "description": "Product demo script and walkthrough",
+      "category": "08-launch",
+      "file": "commands/08-launch/create-demo-script.md"
+    },
+    {
+      "name": "generate-status-report",
+      "description": "Executive status updates and reports",
+      "category": "08-launch",
+      "file": "commands/08-launch/generate-status-report.md"
     },
     {
       "name": "analyze-win-loss",
-      "description": "Win/loss analysis",
-      "category": "sales-marketing",
-      "file": "commands/sales-marketing/analyze-win-loss.md"
+      "description": "Win/loss analysis and insights",
+      "category": "09-feedback",
+      "file": "commands/09-feedback/analyze-win-loss.md"
     },
     {
-      "name": "create-project-charter",
-      "description": "Program charter document",
-      "category": "program-management",
-      "file": "commands/program-management/create-project-charter.md",
-      "skill": "program-management"
+      "name": "analyze-customer-feedback",
+      "description": "Collect customer feedback from public sources (G2, Reddit, reviews)",
+      "category": "09-feedback",
+      "file": "commands/09-feedback/analyze-customer-feedback.md"
     },
     {
-      "name": "track-dependencies",
-      "description": "Cross-team dependency tracking",
-      "category": "program-management",
-      "file": "commands/program-management/track-dependencies.md",
-      "skill": "program-management"
-    },
-    {
-      "name": "create-risk-register",
-      "description": "Risk assessment and mitigation",
-      "category": "program-management",
-      "file": "commands/program-management/create-risk-register.md",
-      "skill": "program-management"
-    },
-    {
-      "name": "create-status-update",
-      "description": "Program status report",
-      "category": "program-management",
-      "file": "commands/program-management/create-status-update.md"
-    },
-    {
-      "name": "facilitate-retrospective",
-      "description": "Retrospective facilitation",
-      "category": "agile-coaching",
-      "file": "commands/agile-coaching/facilitate-retrospective.md",
-      "skill": "agile-ceremonies"
-    },
-    {
-      "name": "plan-sprint",
-      "description": "Sprint planning assistance",
-      "category": "agile-coaching",
-      "file": "commands/agile-coaching/plan-sprint.md",
-      "skill": "agile-ceremonies"
-    },
-    {
-      "name": "create-team-charter",
-      "description": "Team working agreements",
-      "category": "agile-coaching",
-      "file": "commands/agile-coaching/create-team-charter.md",
-      "skill": "agile-ceremonies"
-    },
-    {
-      "name": "assess-team-health",
-      "description": "Team health assessment",
-      "category": "agile-coaching",
-      "file": "commands/agile-coaching/assess-team-health.md",
-      "skill": "agile-ceremonies"
+      "name": "synthesize-customer-feedback",
+      "description": "Synthesize feedback to extract insights and recommendations",
+      "category": "09-feedback",
+      "file": "commands/09-feedback/synthesize-customer-feedback.md"
     }
   ],
   "skills": [
     {
+      "name": "ai-market-trends",
+      "description": "Market and competitive intelligence using SWOT, Porter's Five Forces, Industry Trends, and Competitive Landscape frameworks",
+      "directory": "skills/ai-market-trends"
+    },
+    {
+      "name": "ai-usecase-generator",
+      "description": "AI use case portfolio generation mapped to Strategic Pillars Quadrant (5 use cases)",
+      "directory": "skills/ai-usecase-generator"
+    },
+    {
       "name": "ai-usecase-prioritization",
-      "description": "Enterprise AI value-based use case prioritization using a risk-adjusted ROI approach.",
+      "description": "Enterprise AI prioritization using VALUE/(RISK+COST) formula with Excel dashboards",
       "directory": "skills/ai-usecase-prioritization"
+    },
+    {
+      "name": "ai-usecase-blueprint",
+      "description": "Comprehensive product blueprints with business model, architecture, pricing, responsible AI, and execution roadmap",
+      "directory": "skills/ai-usecase-blueprint"
     }
   ]
 }
