@@ -11,51 +11,51 @@
 
 **ASCII Diagram**:
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                      USER INTERFACE LAYER                        │
-│  Web App | Mobile App | Slack/Teams | API | Embedded Widget     │
-└────────────────────────────┬────────────────────────────────────┘
-                             │
-┌────────────────────────────▼────────────────────────────────────┐
-│                    APPLICATION LAYER                            │
-│  • Authentication & Authorization (SSO, RBAC)                   │
-│  • Request Routing & Load Balancing                             │
-│  • Rate Limiting & Throttling                                   │
-│  • Session Management                                           │
-│  • Human-in-Loop Orchestration                                  │
-└────────────────────────────┬────────────────────────────────────┘
-                             │
-┌────────────────────────────▼────────────────────────────────────┐
-│                       AI AGENT LAYER                            │
-│  • Agent Orchestration (Multi-Agent Coordination)               │
-│  • Reasoning & Planning                                          │
-│  • Tool Selection & Execution                                    │
-│  • Response Generation & Formatting                             │
-└──────┬─────────────────────┬──────────────────────┬────────────┘
-       │                     │                      │
-┌──────▼──────┐      ┌──────▼──────┐       ┌──────▼──────┐
-│   AI STACK   │      │ DATA STACK  │       │  FEEDBACK   │
-│              │      │             │       │   LOOPS     │
-│ • LLM APIs   │      │ • Vector DB │       │ • Evals     │
-│ • Embeddings │      │ • Feature   │       │ • Human     │
-│ • Fine-tuned │      │   Store     │       │   Feedback  │
-│   Models     │      │ • Data Lake │       │ • Metrics   │
-│ • Guardrails │      │ • Pipelines │       │ • Retraining│
-└──────┬──────┘      └──────┬──────┘       └──────┬──────┘
-       │                     │                      │
-┌──────▼─────────────────────▼──────────────────────▼──────┐
-│            MONITORING & OBSERVABILITY LAYER               │
-│  • Performance (Latency, Throughput, Errors)              │
-│  • Cost (Token usage, API costs, Infrastructure)          │
-│  • Quality (Accuracy, Relevance, Hallucination Rate)      │
-│  • Safety (Guardrails, Bias, Harmful Content)             │
-│  • Compliance (Audit Trail, Data Lineage, Policies)       │
-└───────────────────────────────────────────────────────────┘
-       ↑                     ↑                      ↑
-┌──────┴────────────────────────────────────────────┴──────┐
-│                     DATA SOURCES                           │
-│  Enterprise Systems | APIs | Databases | Real-time Streams│
-└────────────────────────────────────────────────────────────┘
++-----------------------------------------------------------------+
+|                      USER INTERFACE LAYER                        |
+|  Web App | Mobile App | Slack/Teams | API | Embedded Widget     |
++----------------------------+------------------------------------+
+                             |
++----------------------------v------------------------------------+
+|                    APPLICATION LAYER                            |
+|  • Authentication & Authorization (SSO, RBAC)                   |
+|  • Request Routing & Load Balancing                             |
+|  • Rate Limiting & Throttling                                   |
+|  • Session Management                                           |
+|  • Human-in-Loop Orchestration                                  |
++----------------------------+------------------------------------+
+                             |
++----------------------------v------------------------------------+
+|                       AI AGENT LAYER                            |
+|  • Agent Orchestration (Multi-Agent Coordination)               |
+|  • Reasoning & Planning                                          |
+|  • Tool Selection & Execution                                    |
+|  • Response Generation & Formatting                             |
++------+---------------------+--------------------+---------------+
+       |                     |                    |
++------v------+      +-------v------+       +-----v-------+
+|   AI STACK   |      | DATA STACK  |       |  FEEDBACK   |
+|              |      |             |       |   LOOPS     |
+| • LLM APIs   |      | • Vector DB |       | • Evals     |
+| • Embeddings |      | • Feature   |       | • Human     |
+| • Fine-tuned |      |   Store     |       |   Feedback  |
+|   Models     |      | • Data Lake |       | • Metrics   |
+| • Guardrails |      | • Pipelines |       | • Retraining|
++------+-------+      +------+------+       +------+------+
+       |                     |                     |
++------v---------------------v---------------------v------+
+|            MONITORING & OBSERVABILITY LAYER               |
+|  • Performance (Latency, Throughput, Errors)              |
+|  • Cost (Token usage, API costs, Infrastructure)          |
+|  • Quality (Accuracy, Relevance, Hallucination Rate)      |
+|  • Safety (Guardrails, Bias, Harmful Content)             |
+|  • Compliance (Audit Trail, Data Lineage, Policies)       |
++------^---------------------^---------------------^-------+
+       |                     |                     |
++------+---------------------+---------------------+-------+
+|                     DATA SOURCES                           |
+|  Enterprise Systems | APIs | Databases | Real-time Streams|
++------------------------------------------------------------+
 ```
 
 **Mermaid Diagram**:
@@ -84,38 +84,38 @@ graph TD
 **ASCII Diagram**:
 ```
 User Query
-    │
-    ▼
-┌───────────────┐
-│ Query         │
-│ Understanding │  ← LLM analyzes intent
-└───────┬───────┘
-        │
-        ▼
-┌───────────────┐
-│ Embedding     │  ← Convert query to vector
-│ Generation    │
-└───────┬───────┘
-        │
-        ▼
-┌───────────────┐
-│ Vector Search │  ← Search knowledge base
-│ (Top-K)       │     (Pinecone/Weaviate/Chroma)
-└───────┬───────┘
-        │
-        ▼
-┌───────────────┐
-│ Context       │  ← Retrieved docs + metadata
-│ Assembly      │
-└───────┬───────┘
-        │
-        ▼
-┌───────────────┐
-│ LLM           │  ← Generate response with context
-│ Generation    │     + citations
-└───────┬───────┘
-        │
-        ▼
+    |
+    v
++---------------+
+| Query         |
+| Understanding |  <- LLM analyzes intent
++-------+-------+
+        |
+        v
++---------------+
+| Embedding     |  <- Convert query to vector
+| Generation    |
++-------+-------+
+        |
+        v
++---------------+
+| Vector Search |  <- Search knowledge base
+| (Top-K)       |     (Pinecone/Weaviate/Chroma)
++-------+-------+
+        |
+        v
++---------------+
+| Context       |  <- Retrieved docs + metadata
+| Assembly      |
++-------+-------+
+        |
+        v
++---------------+
+| LLM           |  <- Generate response with context
+| Generation    |     + citations
++-------+-------+
+        |
+        v
     Response with Citations
 ```
 
